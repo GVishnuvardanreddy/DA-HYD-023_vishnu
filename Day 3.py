@@ -1,4 +1,4 @@
-'''
+
 age = int(float(input('Enter the age:')))
 print(age)
 print(type(age))
@@ -70,7 +70,7 @@ print(a)
 b= 45>56 or 25<= 45
 print(b)
 c=not(True)
-print(c)'''
+print(c)
 #identity operators--> is and isnot4
 a=35
 b=35
