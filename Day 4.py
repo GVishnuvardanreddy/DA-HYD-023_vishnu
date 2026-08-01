@@ -1,66 +1,181 @@
 '''
-a = [1,3,5,6]
-b= a
+Identity Operators -->checks the identity of an object --> id()
+#is,is not
+
+a = 5
+b = a
 print(id(a))
 print(id(b))
-c= [1,3,5,6]#List (Mutable collections) ,ids are diff
+c = 5
 print(id(c))
-print(c is a)#output false
-print(c==a)#output True
+print(a is c)
+print(5 == 5)
+
+a = [1,3,5,6]
+b = a
+print(id(a))
+print(id(b))
+c = [1,3,5,6]
+print(id(c))
+#As we have Lists (Mutable Collection) both c and a lists will have different
+#ids whereas values are same
+print(c is a) #output False
+print(c == a) #output True
 print(a is not c)
-#Bitwise operators--> we perform bitwise operators over operands &(and),|(or),^(xor),shifting operators(<<,>>
-print(5&3) #converted to bit-wise operators
-print(5|3)#Bit-wise or
-print(5^3)#Bit-wise XOR
-print(5 and 3)#Returns only first digit
-print(5 or 3)#Returns second digit
 
-print(5<1)#false comparison
-print(5<<1)#left shift by 1 position in binary 5(0101-->1010)_10(o/p)
-print(5>>1)#Right shift by 1 position in binary5(0101-->0010)_2(o/p)
-print(15<<2)#convert 15 to binary and perform 2 times left shifting
-print(15>>2)
+#Bitwise Operators --> we perform bitwise operations over operands
+#& (and) , | (or),^(XOR),shifting operators (<<,>>)
+#Number will be converted to binary format
 
-names = input("enter the name:").split(',')
+print(5&3) #both 5 and 3 to be converted binary and bitwise and is performed
+
+print(5|3) #bitwise OR
+
+print(5^3) #Bitwise XOR
+
+print(5 and 3) #here and is logical operator checks for both existances
+#returns 5 in above case
+
+print(5 or 3) #returns 3 in this case
+
+#Leftshift Operator << ,Right Shift Operator >>
+
+print(5 < 1) #False Comparision
+print(5 << 1) #Left shift operation by 1 position
+print(5 >> 1) #Right shift operation
+
+print(15 << 2) #convert 15 to binary and perform 2 times left shifting 
+
+print(15 >> 2) #same 2 times right shifting
+#Input Formatting --> input(),int(input()),float(input())
+#You know -->single input
+#2 or 3  inputs --> map()
+#group of integers --> list(map(int,input().split(','))
+
+names = input("Enter the names:").split(',')
 print(names)
 
-name1,name2 =map(str,input("enter the name:").split(','))
-print(name1,name2 )
+name1,name2 = map(str,input("Enter the Friends Names:").split(','))
+print(name1,name2)
+'''
+#Tokens --> Numeric Datatypes --> Operartors -->Flow of the program
+#Control Block Statements -->they control the flow of the program
+#when to execute,how to execute
+#Conditional Statements --> if,else,elif (rely on condition to be executed)
+#Repetition Statements (Loops) --> for,while
 
+#Conditional Statements -->if usage
+'''
+Syntax : 
 
-#conditional statements-->if usage
+if <condition>:
+    statement(s)...
+    ......
 
 #age = 15
-age=int(input("Enter the age:"))
-if age>=18:
-    print("Your age is:",age)
+age = int(input("Enter the age:"))
+if age >=18:
+    print('Your age is:',age)
 
-#age = 15
-age=int(input("Enter the age:"))
-if age>=18 and age in [21,19,20]:
-    print("Your age is:",age)
+age = int(input("Enter the age:"))
+if age>=18 and age in [19,21,20]:
+    print('Your Age is',age)
 print(age)
-#ex: voter eligibility
-age= int(input("enter the age:"))
-if age >18:
-    print("you are eligible",age)
+
+#else keyword --> if-else
+
+else:
+    statement(s)..
+
+if-else usage as below:
+
+if <condition>:
+    statement(s)...
+    ....
+else:
+    statement(s)......
+    ....
+'''
+
+#Vote Elibility ->To check his/her voter eligibilty and give access...
+
+age = int(input("Enter the age:"))
+'''
+if age>=18:
+    print("You have Voter eligibility and age is",age)
     print("Access Granted")
 else:
     age = 18-age
-    #print("You are ineligible,as ur age is:",age,"years")
-    print("You need to wait for more",age,"years")'''
-
-#nested if
+    #print("You dont have eligibility as your age is",age,"years")
+    print("You need to wait for more",age,"years")
+'''
+#Same case let's use only nested --> if,else
 if age >0:
-    if age >=18:
-        print("you are eligible",age)
+    if age>=18:
+        print("You have Voter eligibility and age is",age)
         print("Access Granted")
     else:
         age = 18-age
-        #print("You are ineligible,as ur age is:",age,"years")
+        #print("You dont have eligibility as your age is",age,"years")
         print("You need to wait for more",age,"years")
 else:
-    print("You have entered -ve values")
+    print("You have entered -ve values/zero enter only +ve")
+
+'''
+task : Student marks and grade analayzer (if-else)
+90 - 100 --> 'A'
+80 - 89 --> 'B'
+70- 79 --> 'C'
+60 - 69 --> 'D'
+>60 --> Fail
+#also -ve cases should not be allowed and marks shouldnt be greater 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
